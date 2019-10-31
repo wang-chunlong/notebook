@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页-{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+<div class="container">
+    <article>
+        <section>
+        </section>
+    </article>
+
+    <aside>
+        <img src="{{ url_for('static', filename='head_portrait.jpg') }}"
+             alt=""
+             id="head_portrait"
+        >
+        <footer>
+            <p>&copy;版权所有</p>
+        </footer>
+    </aside>
+</div>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>

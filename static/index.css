@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+}
+
+html, body, .container, aside {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+.container > article {
+    overflow-y: auto;
+    flex: 3;
+    padding: 1rem;
+    background: #eeeeee;
+}
+
+aside {
+    overflow-y: hidden;
+    flex: 1;
+    position: relative;
+}
+
+aside > img {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 50%;
+    box-shadow: 6px -4px 12px #cccccc;
+}
+
+aside > footer {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+aside > footer > p {
+    text-align: center;
+}
