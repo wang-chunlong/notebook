@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hans">
 <head>
     <meta charset="UTF-8">
     <title>首页-{{ title }}</title>
@@ -9,6 +9,9 @@
 <div class="container">
     <article>
         <section>
+            {% for i in img %}
+            <img src="{{ i.src }}" alt="{{ i.alt }}" width="100%">
+            {% endfor %}
         </section>
     </article>
 
