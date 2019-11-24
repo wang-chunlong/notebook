@@ -1,6 +1,4 @@
 """数据库模型"""
-
-import sqlalchemy
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -17,6 +15,7 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
 
 class Photo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
