@@ -4,12 +4,12 @@ from typing import List
 
 from flask import Blueprint, render_template
 
-from models import db, User, Photo
+from models import Photo, User, db
 
 bp = Blueprint("bp", __name__)
 
 
-@bp.route('/')
+@bp.route("/")
 def hello_world():
     db.create_all()
     # user = User("张三","qqq@qq.com")
@@ -22,8 +22,11 @@ def hello_world():
     #     db.session.add(photo)
     # db.session.commit()
     photo_list: List[Photo] = Photo.query.filter_by(label="QQ").all()
-    img_list = [{
-        "src": "/".join(img.photo_name.split(os.path.sep)[-3:]),
-        "alt": img.photo_name.split(os.path.sep)[-1],
-    } for img in photo_list]
-    return render_template('index.html', title=user.username, img=img_list)
+    img_list = [
+        {
+            "src": "/".join(img.photo_name.split(os.path.sep)[-3:]),
+            "alt": img.photo_name.split(os.path.sep)[-1],
+        }
+        for img in photo_list
+    ]
+    return render_template("index.html", title=user.username, img=img_list)

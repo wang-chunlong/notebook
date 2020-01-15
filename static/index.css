@@ -1,8 +1,12 @@
-html, body {
+html,
+body {
     margin: 0;
 }
 
-html, body, .container, aside {
+html,
+body,
+.container,
+aside {
     height: 100%;
 }
 
@@ -10,7 +14,7 @@ html, body, .container, aside {
     display: flex;
 }
 
-.container > article {
+.container>article {
     overflow-y: auto;
     flex: 3;
     padding: 1rem;
@@ -23,20 +27,20 @@ aside {
     position: relative;
 }
 
-aside > img {
+aside>img {
     display: block;
     margin: 1rem auto;
     border-radius: 50%;
     box-shadow: 6px -4px 12px #cccccc;
 }
 
-aside > footer {
+aside>footer {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
     right: 1rem;
 }
 
-aside > footer > p {
+aside>footer>p {
     text-align: center;
 }
